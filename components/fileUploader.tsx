@@ -73,7 +73,7 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
           alt="upload"
           width={24}
           height={24}
-        />
+        />{" "}
         <p>Upload</p>
       </Button>
       {files.length > 0 && (
@@ -100,6 +100,7 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
                       alt="loader"
                       width={80}
                       height={26}
+                      unoptimized={true}
                     />
                   </div>
                 </div>

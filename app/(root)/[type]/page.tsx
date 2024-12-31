@@ -23,7 +23,8 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
             {/* Total Size: <span className="h5">0 mb</span> */}
           </p>
           <div className="sort-container">
-            <Image src="assets/icons/sort.svg" alt="sort" width={30} height={30} />
+            <Image src="assets/icons/sort.svg" alt="sort" width={30} height={30} /><div className="w-4 lg:hidden">
+          </div>
             <Sort />
           </div>
         </div>
