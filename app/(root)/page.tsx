@@ -25,7 +25,7 @@ const Dashboard = async () => {
     return (
         <div className="dashboard-container">
             <section>
-                <Chart used={totalSpace.used} />
+                <Chart used={totalSpace.used}/>
 
                 {/* Uploaded file type summaries */}
                 <ul className="dashboard-summary-list">
@@ -50,7 +50,7 @@ const Dashboard = async () => {
                                 </div>
 
                                 <h5 className="summary-type-title">{summary.title}</h5>
-                                <Separator className="bg-light-400" />
+                                <Separator className="bg-light-400"/>
                                 <FormattedDateTime
                                     date={summary.latestDate}
                                     className="text-center"
@@ -66,7 +66,7 @@ const Dashboard = async () => {
                 <h2 className="h3 xl:h2 text-light-100">Recent files uploaded</h2>
                 {files.documents.length > 0 ? (
                     <ul className="mt-5 flex flex-col gap-5">
-                        {files.documents.map((file: Models.Document) => (
+                        {files.documents.slice(0, 9).map((file: Models.Document) => (
                             <Link
                                 href={file.url}
                                 target="_blank"
@@ -95,6 +95,7 @@ const Dashboard = async () => {
                     <p className="empty-list">No files uploaded</p>
                 )}
             </section>
+
         </div>
     );
 };
